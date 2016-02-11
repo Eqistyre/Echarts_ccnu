@@ -61,4 +61,10 @@ app.use(function(err, req, res, next) {
 
 module.exports = app;
 
-//add routes rules
+
+//
+app.get('/findYourLover', function(req, res){
+    console.log(req.query.name);
+    console.log(req.query.email);
+    res.send('Get Over');
+});

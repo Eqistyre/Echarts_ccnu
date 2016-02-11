@@ -1,7 +1,9 @@
 var express = require('express');
+var app = express();
 var router = express.Router();
 
-/* GET home page. */
+/* GET findYourLover page. */
+
 router.get('/', function(req, res, next) {
   res.render('findYourLover', { title: 'findYourLover' });
 });
