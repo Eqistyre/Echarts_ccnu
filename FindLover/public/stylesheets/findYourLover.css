@@ -23,9 +23,12 @@ html, body{
   width: 50%;
   text-align: center;
 }
+
 #submitBtn {
-  margin-left: 40%;
+  text-align: center;
+  margin:0 auto;
 }
+
 .button {
     display: inline-block;
     zoom: 1; /* zoom and *display = ie7 hack for display:inline-block */
@@ -54,4 +57,7 @@ html, body{
 .button:active {
     position: relative;
     top: 1px;
+}
+.hide {
+  display: none;
 }
