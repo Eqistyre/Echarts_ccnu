@@ -10,7 +10,7 @@ html
       #Get
         p#Info 请输入你的学号～
         #submitBtn
-          form#GetJsonform(action = "http://console.ccnu.edu.cn/ecard/getTrans", method = "GET")
+          form#GetJsonform(action = "/findYourLover/server", method = "post")
             input(type = "text" name = "userId")
             input#form1.hide(type = "text" name = "days")
             input#form2.hide(type = "text" name = "startNum")
