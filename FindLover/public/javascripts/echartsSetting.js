@@ -1,12 +1,35 @@
-var myChart = echarts.init(document.getElementById("Map"));
+//Judge Day
+function judgeDay() {
 
-var outout = ($("#out").val().toString()).toString();
-if(outout != ""){
-  var outjson = $.parseJSON(outout);
 }
-console.log(outjson);
 
-// 指定图表的配置项和数据
+//Json
+var out = ($("#out").val().toString()).toString();
+if(out != ""){
+  var outjson = $.parseJSON(out);
+
+}
+
+//get Date
+var XueZi = [0,0,0,0,0,0,0];
+var DongYi = [0,0,0,0,0,0,0];
+var DongEr = [0,0,0,0,0,0,0];
+var GuiXiangYuan = [0,0,0,0,0,0,0];
+var QinYuanChun = [0,0,0,0,0,0,0];
+var ThisDate = Date.parse("2016-2-14");
+
+var initDay = 4;
+var minutes = 1000 * 60;
+var hours = minutes * 60;
+var days = hours * 24;
+var years = days * 365;
+var passDay = ThisDate/days;
+var ThisDay = Math.floor((passDay % 7 + initDay) % 7) + 1;
+
+console.log(ThisDay);
+
+// echarts setting
+var myChart = echarts.init(document.getElementById("Map"));
 var option = {
     tooltip : {
         trigger: 'axis'
@@ -34,7 +57,8 @@ var option = {
     ],
     yAxis : [
         {
-            type : 'value'
+            type : 'value',
+            data : '次数'
         }
     ],
     series : [
@@ -42,33 +66,33 @@ var option = {
             name:'学子餐厅',
             type:'line',
             stack: '总量',
-            data:[120, 132, 101, 134, 90, 230, 210]
+            data: XueZi
         },
         {
             name:'东一餐厅',
             type:'line',
             stack: '总量',
-            data:[220, 182, 191, 234, 290, 330, 310]
+            data:DongYi
         },
         {
             name:'东二餐厅',
             type:'line',
             stack: '总量',
-            data:[150, 232, 201, 154, 190, 330, 410]
+            data:DongEr
         },
         {
             name:'桂香园',
             type:'line',
             stack: '总量',
-            data:[320, 332, 301, 334, 390, 330, 320]
+            data:GuiXiangYuan
         },
         {
             name:'沁园春',
             type:'line',
             stack: '总量',
-            data:[820, 932, 901, 934, 1290, 1330, 1320]
+            data:QinYuanChun
         }
     ]
 };
-// 使用刚指定的配置项和数据显示图表。
+//set ecahrts
 myChart.setOption(option);
