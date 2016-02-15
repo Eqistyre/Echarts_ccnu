@@ -1,3 +1,4 @@
+////This is first I want to use jsonp solve CORS problem
 // $(document).ready(function() {
 //     // process the form
 //     $('form').submit(function(event) {
@@ -36,7 +37,6 @@
 //         event.preventDefault();
 //     });
 // });
-
 $("#form1").val(365);
 $("#form2").val(0);
 $("#form3").val(200);

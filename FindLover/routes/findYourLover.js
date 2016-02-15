@@ -3,7 +3,6 @@ var request = require('request');
 var app = express();
 var router = express.Router();
 
-
 /* GET findYourLover page. */
 
 router.get('/', function(req, res, next) {
@@ -12,14 +11,7 @@ router.get('/', function(req, res, next) {
 
 //form submit
 router.post('/server', function(req, res, next) {
-
-  response = {
-       userId:req.body.userId,
-       days:req.body.days,
-       startNum:req.body.startNum,
-       num:req.body.num
-   };
-  //  console.log(response);
+   //use request to post the data to
   request.post({url:'http://console.ccnu.edu.cn/ecard/getTrans',
   form: {
        userId:req.body.userId,
@@ -28,7 +20,10 @@ router.post('/server', function(req, res, next) {
        num:req.body.num
    }},
   function(err,httpResponse,body) {
-    console.log(httpResponse);
+    var returnData = httpResponse.body;
+    res.render('findYourLover', { returnData: returnData });
+    console.log(returnData);
+    // res.send
   })
 });
 

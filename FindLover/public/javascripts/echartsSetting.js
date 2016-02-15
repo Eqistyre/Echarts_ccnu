@@ -1,5 +1,11 @@
 var myChart = echarts.init(document.getElementById("Map"));
 
+var outout = ($("#out").val().toString()).toString();
+if(outout != ""){
+  var outjson = $.parseJSON(outout);
+}
+console.log(outjson);
+
 // 指定图表的配置项和数据
 var option = {
     tooltip : {
