@@ -12,7 +12,8 @@ router.get('/', function(req, res, next) {
 //form submit
 router.post('/server', function(req, res, next) {
    //use request to post the data to
-  request.post({url:'http://console.ccnu.edu.cn/ecard/getTrans',
+  request.post({
+  url:'http://console.ccnu.edu.cn/ecard/getTrans',
   form: {
        userId:req.body.userId,
        days:req.body.days,

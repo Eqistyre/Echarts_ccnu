@@ -1,15 +1,3 @@
-//Judge Day
-function judgeDay() {
-
-}
-
-//Json
-var out = ($("#out").val().toString()).toString();
-if(out != ""){
-  var outjson = $.parseJSON(out);
-
-}
-
 //get Date
 var XueZi = [0,0,0,0,0,0,0];
 var DongYi = [0,0,0,0,0,0,0];
@@ -26,6 +14,17 @@ var years = days * 365;
 var passDay = ThisDate/days;
 var ThisDay = Math.floor((passDay % 7 + initDay) % 7) + 1;
 
+//Json and set value
+var out = ($("#out").val().toString()).toString();
+if(out != ""){
+  var outjson = $.parseJSON(out);
+  for(var i = 0; i < outjson.length; i++) {
+    var dealDateTime = outjson[i].dealDateTime;
+    var orgName = outjson[i].orgName;
+    var orgName = orgName.split("/")[3];
+    console.log(orgName);
+  }
+}
 console.log(ThisDay);
 
 // echarts setting
@@ -45,7 +44,7 @@ var option = {
     },
     toolbox: {
         feature: {
-            // saveAsImage: {}
+            // saveAsImage:
         }
     },
     xAxis : [
