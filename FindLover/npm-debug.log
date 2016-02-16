@@ -18,7 +18,7 @@
 9 verbose stack     at maybeClose (internal/child_process.js:818:16)
 9 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
 10 verbose pkgid FindLover@0.0.0
-11 verbose cwd /Users/Eqistyre/Desktop/CCNU_FindLover/FindLover
+11 verbose cwd /Users/Eqistyre/Documents/Code/GitHub/Echarts_ccnu/FindLover
 12 error Darwin 15.3.0
 13 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "start"
 14 error node v4.2.2
