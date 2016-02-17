@@ -32,7 +32,7 @@ if(out != ""){
     dealDayArray.push(ThisDay);
     orgNameArray.push(orgNameSplit);
     function compare(orgNameSplit,i) {
-      console.log(orgNameSplit);
+      // console.log(orgNameSplit);
       switch (orgNameSplit) {
         case "学子餐厅":
           XueZi[i]++;
@@ -62,7 +62,7 @@ if(out != ""){
           BoYaYuan[i]++;
           break;
         default:
-
+          break;
       }
     }
     switch (ThisDay) {
@@ -99,7 +99,7 @@ var option = {
         trigger: 'axis'
     },
     legend: {
-        data:['学子餐厅','东一餐厅','东二餐厅','桂香园','沁园春']
+        data:['学子餐厅','东一餐厅','东二餐厅','桂香园','沁园春','博雅园']
     },
     grid: {
         left: '4%',
@@ -122,6 +122,7 @@ var option = {
     yAxis : [
         {
             type : 'value',
+            name : '次数',
             data : '次数'
         }
     ],
@@ -129,32 +130,32 @@ var option = {
         {
             name:'学子餐厅',
             type:'line',
-            stack: '总量',
             data: XueZi
         },
         {
             name:'东一餐厅',
             type:'line',
-            stack: '总量',
             data: DongYi
         },
         {
             name:'东二餐厅',
             type:'line',
-            stack: '总量',
             data: DongEr
         },
         {
             name:'桂香园',
             type:'line',
-            stack: '总量',
             data: GuiXiangYuan
         },
         {
             name:'沁园春',
             type:'line',
-            stack: '总量',
             data: QinYuanChun
+        },
+        {
+            name:'博雅园',
+            type:'line',
+            data: BoYaYuan
         }
     ]
 };
