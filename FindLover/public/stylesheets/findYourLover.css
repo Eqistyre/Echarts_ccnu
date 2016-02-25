@@ -2,9 +2,13 @@ html, body{
   margin: 0;
   width: 100%;
   height: 100%;
-  background-color: #123;
 }
-
+#Bg {
+  width: 100%;
+  height: 100%;
+  z-index: -1000;
+  position: absolute;
+}
 #Main {
   height: 20%;
 }
@@ -12,10 +16,6 @@ html, body{
 #Map {
   margin: 0;
   height: 50%;
-}
-
-#Get {
-  margin-top: 10%;
 }
 
 #Info {

@@ -6,16 +6,15 @@ html
     title= title
     link(rel = "stylesheet", href = "/stylesheets/findYourLover.css")
   body
+    img(src = "/images/bg.png")#Bg
     #Main
       #Get
-        p#Info 请输入你的学号～
-        #submitBtn
-          form#GetJsonform(action = "/findYourLover/server", method = "post")
-            input(type = "text" name = "userId")
-            input#form1.hide(type = "text" name = "days")
-            input#form2.hide(type = "text" name = "startNum")
-            input#form3.hide(type = "text" name = "num")
-            input.button#subbtn(type = "submit" value = "Submit")
+        form#GetJsonform(action = "/findYourLover/server", method = "post")
+          input(type = "text" name = "userId")
+          input#form1.hide(type = "text" name = "days")
+          input#form2.hide(type = "text" name = "startNum")
+          input#form3.hide(type = "text" name = "num")
+          input.button#subbtn(type = "submit" value = "Submit")
     #Map
     #hide
       input#out(type = "hidden" value= returnData)

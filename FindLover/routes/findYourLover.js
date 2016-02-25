@@ -24,7 +24,6 @@ router.post('/server', function(req, res, next) {
     var returnData = httpResponse.body;
     res.render('findYourLover', { returnData: returnData });
     console.log(returnData);
-    // res.send
   })
 });
 
