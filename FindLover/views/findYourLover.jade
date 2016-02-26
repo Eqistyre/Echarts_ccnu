@@ -9,15 +9,23 @@ html
     img(src = "/images/bg.png")#Bg
     #Main
       #Get
-        form#GetJsonform(action = "/findYourLover/server", method = "post")
-          input(type = "text" name = "userId")
-          input#form1.hide(type = "text" name = "days")
-          input#form2.hide(type = "text" name = "startNum")
-          input#form3.hide(type = "text" name = "num")
-          input.button#subbtn(type = "submit" value = "Submit")
-    #Map
-    #hide
-      input#out(type = "hidden" value= returnData)
+        form#GetJsonform(action = "/findYourLover/server" method = "post")
+        //- input(type = "text" name = "userId")
+        input#form1.hide(type = "text" name = "days")
+        input#form2.hide(type = "text" name = "startNum")
+        input#form3.hide(type = "text" name = "num")
+        input.button#subbtn(type = "image" value = "Submit" src = "/images/submitBtn.png")
+    //- #Main
+    //-   #Get
+    //-     form#GetJsonform(action = "/findYourLover/server", method = "post")
+    //- input(type = "text" name = "userId")
+    //- input#form1.hide(type = "text" name = "days")
+    //- input#form2.hide(type = "text" name = "startNum")
+    //- input#form3.hide(type = "text" name = "num")
+    //- input.button#subbtn(type = "submit" value = "Submit")
+    //- #Map
+    //- #hide
+    //-   input#out(type = "hidden" value= returnData)
   script(type = "text/javascript" src = "/javascripts/echarts.min.js")
   script(type = "text/javascript" src = "/javascripts/jquery-2.2.0.min.js")
   script(type = 'text/javascript' src = "/javascripts/echartsSetting.js")
