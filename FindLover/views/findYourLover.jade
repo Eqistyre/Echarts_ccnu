@@ -6,18 +6,14 @@ html
     title= title
     link(rel = "stylesheet", href = "/stylesheets/findYourLover.css")
   body
+    img#Bg(src = "/images/bg.png")
     #Main
-      img#number(src = "/images/number.png")
-      input.button#subbtn(type = "image" value = "Submit" src = "/images/submitBtn.png")
-    //- #Main
-    //-   #Get
-    //-     img#number(src = "/images/number.png")
-    //-     form#GetJsonform(action = "/findYourLover/server" method = "post")
-    //-     //- input(type = "text" name = "userId")
-    //-     input#form1.hide(type = "text" name = "days")
-    //-     input#form2.hide(type = "text" name = "startNum")
-    //-     input#form3.hide(type = "text" name = "num")
-    //-     input.button#subbtn(type = "image" value = "Submit" src = "/images/submitBtn.png")
+      form#GetJsonform(action = "/findYourLover/server" method = "post")
+        input#textInput(type = "text" name = "userId")
+        input#form1.hide(type = "text" name = "days")
+        input#form2.hide(type = "text" name = "startNum")
+        input#form3.hide(type = "text" name = "num")
+        input.button#subbtn(type = "image" value = "Submit" src = "/images/submitBtn.png")
     //- #Main
     //-   #Get
     //-     form#GetJsonform(action = "/findYourLover/server", method = "post")
@@ -26,11 +22,13 @@ html
     //- input#form2.hide(type = "text" name = "startNum")
     //- input#form3.hide(type = "text" name = "num")
     //- input.button#subbtn(type = "submit" value = "Submit")
-    //- #Map
-    //- #hide
-    //-   input#out(type = "hidden" value= returnData)
-  //- script(type = "text/javascript" src = "/javascripts/echarts.min.js")
-  //- script(type = "text/javascript" src = "/javascripts/jquery-2.2.0.min.js")
-  //- script(type = 'text/javascript' src = "/javascripts/echartsSetting.js")
-  //- script(type = 'text/javascript' src = "/javascripts/jquery.form.js")
-  //- script(type = 'text/javascript' src = "/javascripts/main.js")
+    #Map
+    #hide
+      input#out(type = "hidden" value= returnData)
+    
+    
+  script(type = "text/javascript" src = "/javascripts/echarts.min.js")
+  script(type = "text/javascript" src = "/javascripts/jquery-2.2.0.min.js")
+  script(type = 'text/javascript' src = "/javascripts/echartsSetting.js")
+  script(type = 'text/javascript' src = "/javascripts/jquery.form.js")
+  script(type = 'text/javascript' src = "/javascripts/main.js")

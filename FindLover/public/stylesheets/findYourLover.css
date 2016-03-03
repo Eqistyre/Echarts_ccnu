@@ -3,42 +3,67 @@ html, body{
   width: 100%;
   height: 100%;
 }
-
-/*#Bg {
+#Bg {
   width: 100%;
   height: 100%;
   z-index: -1000;
   position: absolute;
-}*/
+}
 
-#Main {
-  height: 100%;
-  width: 100%;
+#Map {
+  margin: 0;
+  height: 50%;
+}
+
+#Info {
+  margin-left: 25%;
+  width: 50%;
   text-align: center;
-  background-image: url(/images/bg.png)
 }
 
 #subbtn {
-  margin: 0px auto;
+  margin-top: 2vh;
+  margin-left: auto;
+	margin-right: auto;
+  text-align: center;
+  display: inline-block;
+  width: 30vw;
 }
 
-#number {
-  margin: 0px auto;
+#Main {
+  text-align: center;
+  width: 100%;
+  height: 100%;
 }
 
+#textInput {
+  width: 71vw;
+  margin-left: auto;
+	margin-right: auto;
+  background: transparent;
+  text-align: center;
+  border: 0;
+  color: white;
+  font-family:inherit;
+  font-style:italic;
+  font-size: 23px;
+  z-index: 10000;
+}
+
+#GetJsonform {
+  margin-top: 48vh;
+  position: absolute;
+}
 .button {
     outline: none;
 }
-
 .button:hover {
     text-decoration: none;
 }
-
 .button:active {
     position: relative;
     top: 5px;
 }
-
 .hide {
   display: none;
 }
