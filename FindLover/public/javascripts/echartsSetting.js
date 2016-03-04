@@ -91,6 +91,9 @@ if(out != ""){
     }
   }
 }
+// Use Jquery set postion
+$("#Map").css("margin-top", "16vh");
+$("#Map").css("margin-left", "5vw");
 
 // echarts setting
 var myChart = echarts.init(document.getElementById("Map"));
@@ -157,7 +160,8 @@ var option = {
             type:'line',
             data: BoYaYuan
         }
-    ]
+    ],
+    backgroundColor : 'white'
 };
 //set ecahrts
 myChart.setOption(option);

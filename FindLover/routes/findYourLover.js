@@ -15,14 +15,14 @@ router.post('/server', function(req, res, next) {
   request.post({
   url:'http://console.ccnu.edu.cn/ecard/getTrans',
   form: {
-       userId:req.body.userId,
-       days:req.body.days,
-       startNum:req.body.startNum,
-       num:req.body.num
+       userId: req.body.userId,
+       days: 365,
+       startNum: 0,
+       num: 500
    }},
   function(err,httpResponse,body) {
-    var returnData = httpResponse.body;
     res.render('findYourLover', { returnData: returnData });
+    res.render('findYourLover', { resultType: "block" });
     console.log(returnData);
   })
 });

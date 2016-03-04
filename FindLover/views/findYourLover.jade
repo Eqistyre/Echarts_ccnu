@@ -10,11 +10,9 @@ html
     #Main
       form#GetJsonform(action = "/findYourLover/server" autocomplete="off" method = "post")
         input#textInput(type = "text" name = "userId")
-        input#form1.hide(type = "text" name = "days")
-        input#form2.hide(type = "text" name = "startNum")
-        input#form3.hide(type = "text" name = "num")
         input.button#subbtn(type = "image" value = "Submit" src = "/images/submitBtn.png")
-    #Map
+    #result
+      #Map
     #hide
       input#out(type = "hidden" value= returnData)
   script(type = "text/javascript" src = "/javascripts/echarts.min.js")
