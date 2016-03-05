@@ -21,8 +21,8 @@ router.post('/server', function(req, res, next) {
        num: 500
    }},
   function(err,httpResponse,body) {
+    var returnData = httpResponse.body;
     res.render('findYourLover', { returnData: returnData });
-    res.render('findYourLover', { resultType: "block" });
     console.log(returnData);
   })
 });

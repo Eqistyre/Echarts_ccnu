@@ -6,5 +6,5 @@ var hideVal = $("#out").val();
 $("#result").hide();
 
 if (hideVal != "") {
-  $("#result").fadeIn(1500);
+  $("#result").css("display", "block");
 }
