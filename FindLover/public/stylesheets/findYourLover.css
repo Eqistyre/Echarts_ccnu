@@ -1,12 +1,10 @@
 html, body{
   margin: 0;
   width: 100%;
-  height: 100%;
 }
 
 #Bg {
   width: 100%;
-  height: 100%;
   z-index: -1000;
   position: absolute;
 }
@@ -14,7 +12,7 @@ html, body{
 #Map {
   position: absolute;
   margin: auto;
-  height: 53vh;
+  height: 70%;
   width: 90vw;
 }
 
@@ -25,7 +23,7 @@ html, body{
 }
 
 #subbtn {
-  margin-top: 2vh;
+  margin-top: 2%;
   margin-left: auto;
 	margin-right: auto;
   text-align: center;
@@ -37,18 +35,16 @@ html, body{
   text-align: center;
   position: absolute;
   width: 100%;
-  height: 100%;
 }
 
 #result {
   text-align: center;
   position: absolute;
-  margin-top: 10vh;
-  width: 100vw;
-  height: 75vh;
+  margin-top: 10%;
+  width: 100%;
+  height: 75%;
   background-image: url("/images/resultOne.png");
   background-size: cover;
-  display: none;
 }
 
 #textInput {
@@ -67,7 +63,7 @@ html, body{
 }
 
 #GetJsonform {
-  margin-top: 46vh;
+  margin-top: 85%;
   position: absolute;
 }
 
